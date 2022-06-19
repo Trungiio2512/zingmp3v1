@@ -1,0 +1,219 @@
+
+.list__heading{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content:space-between
+}
+
+
+.list__heading span{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color:var(--text-color);
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.list-song__item{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: relative;
+}
+
+.list-song__item {
+    border-top: 1px solid  #221b2e
+}
+
+.list-song__item.list-song__item--active{
+    background-color: var(--sercond-color);
+}
+
+.list-song__item-left{
+    display: flex;
+    align-items:center;
+
+}
+
+.list-song__item-center{
+    position: absolute;
+    left: 47%;
+}
+
+.list-song__item-right{
+    display: flex;
+    align-items: center;
+}
+
+/* hover */
+
+.list-song__item:hover {
+    background-color: var(--sercond-color);
+}
+
+.list-song__item:hover .card-song__img-btn{
+    display: flex;
+}
+
+.list-song__item:hover:not(.list-song__item--active) .card-song__img-btn-play {
+    display: block;
+}
+
+
+.list-song__item:hover .card-song__controls-item{
+    display:flex;
+}
+
+.list-song__item:hover .card-song__durationTime{
+    display:none;
+}
+
+.card-name__song-link:hover,
+.card-song__author-link:hover{
+    text-decoration: underline;
+    color: var(--link-text-hover)
+}
+
+
+
+/* card song */
+
+.card-song{
+    display: flex;
+    
+}
+
+.card-song__img-box{
+    min-width: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.card-song__img{
+    padding-top: 100%;
+    background: no-repeat center / cover;
+    border-radius: 8px;
+}   
+
+.card-song__img-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--overlay-color);
+    border-radius: 8px;
+    display: none;
+}
+
+.card-song__img-icon{
+    margin: auto;
+    z-index: 1;
+    color: var(--white-color);
+    font-size: 1.8rem;
+}
+
+.card-song__img-btn-play {
+   display: none;
+}
+
+.list-song__item.list-song__item--active .card-song__img-btn{
+    display: flex;
+}
+
+.list-song__item.list-song__item--active .card-song__img-btn-play {
+    display: block;
+}
+
+.list-song__item.list-song__item--active.list-song__item--play .card-song__img-btn-play {
+    display: none;
+}
+
+.list-song__item.list-song__item--active.list-song__item--play .card-song__img-btn-gif-play {
+    display: block;
+}
+
+.card-song__img-btn-gif-play{
+    display: none;
+    width: 18px;
+    height: 18px;
+}   
+
+.card-song__img-btn-gif-play{
+    padding-top: 100%;
+    background: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/icon-playing.gif) no-repeat center / 18px;
+
+}
+
+.card-song__info{
+    min-width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.card-song__name{
+    font-size: 1.6rem ;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.card-song__author{
+    margin-top: 8px;
+}
+
+.card-song__durationTime,
+.card-name__song-link,
+.card-song__author-link{
+    color: var(--text-color);
+    display: inline-block;
+    font-size: 1.4rem ;
+}
+
+
+/* card song control  */
+.card-song__durationTime{
+    padding:0 5.5px;
+}
+
+.card-song__controls-list {
+    display: flex;
+}
+
+.card-song__controls-item{
+    display: none;
+}
+
+.card-song__controls-item.card-song__controls-item--heart--active{
+    display: flex;
+}
+
+.card-song__controls-item.card-song__controls-item--heart--active .card-song__controls-item-heart-empty{
+    display: none;
+}
+
+
+.card-song__controls-item:not(.card-song__controls-item--heart--active) .card-song__controls-item-heart-empty{
+    display: flex;
+}
+
+
+.card-song__controls-item.card-song__controls-item--heart--active .card-song__controls-item-heart-fill {
+    display: flex;
+    color: var(--main-color);
+}
+
+.card-song__controls-item:not(.card-song__controls-item--heart--active) .card-song__controls-item-heart-fill{
+    display: none;
+}
+
+
+
+
+

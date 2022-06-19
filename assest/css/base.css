@@ -1,0 +1,323 @@
+
+:root {
+    --container-color: #170f23;
+    --sidebar-color: #221a2d;
+    --main-color: rgb(114, 0, 161);
+    --vip-back-color: linear-gradient(117deg,#5a4be7,#c86dd7 102%) ;
+    --vip-color: #ffdb00;
+    --input-primary: #563983;
+    --checkbox-cus-color: #a0a0a0;
+    --scorllBar-color: rgba(255, 255, 255, 0.302);
+    --link-text-hover: #c662ef;
+    
+    --primary-color: #432275;
+    --sercond-color: rgba(255, 255, 255, 0.1);
+    --third-color: rgba(114, 0, 161, 0.3);
+
+    --white-color: #fff;
+    --text-color: #6a6670;
+    --text-sercond-color: rgba(255, 255, 255, 0.5);
+    --desc-color: #7d7884;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --border-sercond-color: rgba(255, 255, 255, 0.05);
+    --toast-info: #007ac2;
+    --toast-success:#47d864;
+    --player-color: #120c1c;
+    
+    --app-width: 1360px;
+    --player-height: 90px;
+    --header-height: 70px;
+    --sidebar-width: 240px;
+    --slider-height: 170px;
+    --setting-menu-width: 240px;
+    --container-width: calc( var(--app-width) - var(--sidebar-width) );
+    --padding-section: 62px;
+}
+
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* 16px */
+    font-size:  62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+a{
+     text-decoration: none;
+}
+
+/* animation */
+
+@keyframes show {
+
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes showToRight {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*  */
+.app{
+    display: flex;
+    height: calc(100vh - var(--player-height))
+}
+
+
+/* modal */
+
+.modal.active{
+    display: flex;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.modal__overlay{
+    background-color: var(--overlay-color);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.modal__container{
+    margin: auto;
+    z-index: 2;
+    animation: show ease-in 0.4s;
+}
+
+
+.modal__form{
+    position: relative;
+    width: 330px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal__form-body-input{
+    height: 34px;
+    padding-left: 8px;
+    font-size: 1.4rem;
+}
+
+/* customize text line*/
+.t-l--2,
+.t-l--1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.t-l--1 {
+    -webkit-line-clamp: 1;
+}
+
+.t-l--2 {
+    -webkit-line-clamp: 2;
+}
+
+
+/* customize checkbox */
+
+.checkbox-cus{
+    position: relative;
+    width: 28px;
+    height: 16px;
+}
+
+.checkbox-cus input{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+}
+
+.checkbox-cus span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--checkbox-cus-color);
+    border-radius: 8px;
+    transition: all ease-in 0.4s;
+}
+
+.checkbox-cus input:checked ~ span {
+    background-color: var(--main-color);
+}
+
+.checkbox-cus span i {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    top: 1px;
+    left: 1px;
+    transition: all ease-in 0.2s;
+}
+
+.checkbox-cus input:checked ~ span i{
+    left: calc(100% - 15px);
+}
+
+/* input */
+input{
+    border: none;
+    outline: none;
+}
+
+.range-input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.range-input:hover {
+    height: 6px;
+}
+
+.range-input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    box-shadow:  0 0 0 0 rgba(98, 0 , 238, 0.1);
+    transition: all 0.2 ease-out;
+}
+
+.range-input::-webkit-slider-thumb:hover{
+    box-shadow:  0 0 0 8px rgba(98, 0 , 238, 0.1);
+}
+
+.range-input:active::-webkit-slider-thumb{
+    box-shadow:  0 0 0 10px rgba(98, 0 , 238, 0.2);
+}
+
+/* button */
+.btn{
+    display: inline-flex;
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn i{
+    margin: auto;
+}
+
+.btn--nomal{
+    font-size: 1.2rem;
+    border-radius: 18px;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    padding: 6px 12px 4px;
+}
+
+.btn--circle{
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    line-height: 4rem;
+}
+
+.btn--circle-s{
+    /* line-height: 2.4rem; */
+    /* padding: 0 6px; */
+    width: 26px;
+    height: 26px;
+    font-size: 1.4rem;
+}
+
+.btn--circle-s-l{
+    font-size: 1.4rem;
+    width: 38px;
+    height: 38px;
+    display: flex;
+}
+
+.btn--circle-s-l:hover {
+    background-color: var(--sercond-color)
+}
+
+.btn--super-l{
+    font-size: 2.6rem;
+    width: 50px;
+    height: 50px;
+}
+
+.btn--circle-normal {
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+}
+    
+.btn--circle-s:hover{
+    background-color: var(--sercond-color)
+}
+
+/* for control list music */
+.parent-control-box:hover .control-box {
+    display: flex;
+}
+
+.control-box {  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--overlay-color);
+    display: none;
+    border-radius: 10px;
+}
+.btn--control-list {
+    margin: auto;   
+}
+
+.btn--control-list-play {
+    border: 1px solid var(--white-color)
+}

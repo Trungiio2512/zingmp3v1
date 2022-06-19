@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assest/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/sidebar.css">
+    <link rel="stylesheet" href="./assest/css/header.css">
+    <link rel="stylesheet" href="./assest/css/container.css">
+    <link rel="stylesheet" href="./assest/css/myMusic.css">
+    <link rel="stylesheet" href="./assest/css/listSong.css">
+    <link rel="stylesheet" href="./assest/css/toastMes.css">
+    <link rel="stylesheet" href="./assest/css/player.css">
+    <link rel="stylesheet" href="./assest/css/slider.css">
+    <link rel="stylesheet" href="./assest/css/discover.css">
+    <link rel="stylesheet" href="./assest/css/playList.css">
+    <title>ZingMp3</title>
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="sidebar-logo__link">
+                    <img class="sidebar-logo__link-img" src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="">
+                </a>
+            </div>
+            <div class="sidebar-nav">
+                <ul class="sidebar-nav__list">
+                    <li class="sidebar-nav__item sidebar-nav__item--active">
+                        <a href="#" class="sidebar-nav__item-link ">
+                            <i class="sidebar-nav__item-link-icon fa-solid fa-photo-film"></i>
+                            <p>Cá nhân</p>
+                            <i class="sidebar-nav__item-link-icon-play fa-solid fa-play"></i>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav__item ">
+                        <a href="#" class="sidebar-nav__item-link ">
+                            <i class="sidebar-nav__item-link-icon  fa-solid fa-compact-disc"></i>
+                            <p>Khám phá</p>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav__item">
+                        <a href="#" class="sidebar-nav__item-link">
+                            <i class="sidebar-nav__item-link-icon fa-solid fa-chart-pie"></i>
+                            <p>#zingchart</p>
+                            <i class="sidebar-nav__item-link-icon-play fa-solid fa-play"></i>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav__item">
+                        <a href="#" class="sidebar-nav__item-link">
+                            <i class="sidebar-nav__item-link-icon fa-solid fa-radio"></i>
+                            <p>Radio</p>
+                            <span>LIVE</span>
+                            <i class="sidebar-nav__item-link-icon-play fa-solid fa-play"></i>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav__item">
+                        <a href="#" class="sidebar-nav__item-link">
+                            <i class="sidebar-nav__item-link-icon fa-solid fa-clipboard-list"></i>
+                            <p>Theo dõi</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="siderbar-divide"></div>
+            <div class="sidebar-wapper">
+                <div class="sidebar-subnav">
+                    <ul class="sidebar-subnav__list">
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <i class="sidebar-nav__item-link-icon fa-solid fa-music"></i>
+                                <p>Nhạc mới</p>
+                                <i class="sidebar-nav__item-link-icon-play fa-solid fa-play"></i>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <i class="sidebar-nav__item-link-icon fa-solid fa-icons"></i>
+                                <p>Thể loại</p>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <i class="sidebar-nav__item-link-icon fa-solid fa-star"></i>
+                                <p>Top 100</p>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <i class="sidebar-nav__item-link-icon fa-solid fa-audio-description"></i>
+                                <p>MV</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-login">
+                    <!-- if has login sidebar-wapper__box-type--login -->
+                    <!-- <div class="sidebar-wapper__box-type ">
+                        <p>Đăng nhập để khám phá playlist dành riêng cho bạn</p>
+                        <button>Đăng nhập</button>
+                    </div> -->
+                    <div class="sidebar-wapper__box-type sidebar-wapper__box-type--vip">
+                        <p>Nghe nhạc không quảng cáo cùng kho nhạc VIP</p>
+                        <button class="btn--nomal">nâng cấp vip</button>
+                    </div>
+                </div>
+                <div class="sidebar-library">
+                    <div class="sidebar-library__heading">
+                        <span>Thư viện</span>
+                        <div class="sidebar-library__heading-btn">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                    </div>
+                    <ul class="sidebar-subnav__list">
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <img class="sidebar-nav__item-link-img" src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg" alt="">
+                                <p>Bài hát</p>
+                                <i class="sidebar-nav__item-link-icon-play fa-solid fa-play"></i>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <img class="sidebar-nav__item-link-img" src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg" alt="">
+                                <p>Playlist</p>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <img class="sidebar-nav__item-link-img" src="https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg " alt="">
+                                <p>Gần đây</p>
+                            </a>
+                        </li>
+                        <li class="sidebar-nav__item ">
+                            <a href="#" class="sidebar-nav__item-link">
+                                <p>test</p>
+                                <i class="sidebar-nav__item-link-icon-play fa-solid fa-ellipsis"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-createPlayList">
+                <button class="sidebar-createPlayList__btn">
+                    <i class="sidebar-createPlayList__icon fa-solid fa-plus"></i>
+                    <span class="sidebar-createPlayList__text"> Tạo PlayList mới</span>
+                </button>
+            </div>
+        </div>
+        <header class="header grid">
+            <div class="header-left">
+                <div class="header-left__controls">
+                    <div class="header-left__controls-btn header-left__controls--prev active"><i class="fas fa-arrow-left"></i></div>
+                    <div class="header-left__controls-btn header-left__controls--next"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="header-left__search">
+                    <div class=" btn header-left__search-btn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV..." class="header-left__search-input">
+                    <ul class="sugget-list">
+                        <div class="sugget-list__content">
+                            <div class="sugget-heading">Đề xuất cho bạn</div>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                            <li class="sugget-item">
+                                <a href="#" class="sugget-item__link">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Có không giữ</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <ul class="header-right__list">
+                    <li class="header-right__item">
+                        <div class="header-right__item-btn btn btn--circle">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                    </li>
+                    <li class="header-right__item">         
+                        <a href="#" class="header-right__item-link">
+                            <div class="header-right__item-btn btn btn--circle">
+                                    <i class="fab fa-gg"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="header-right__item">
+                        <div class="header-right__item-btn btn btn--circle">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                    </li>
+                    <li class="header-right__item header-right__item-setting">
+                        <div class=" header-right__item-btn btn btn--circle">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="setting-menu">
+                            <div class="setting-menu__top">
+                                <ul class="setting-menu__list">
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-ban"></i>
+                                                <span>Danh Sách chặn</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <div class="setting-item__btn">
+                                            <i class="fas fa-audio-description"></i>
+                                            <span>Chất lượng nhạc</span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </div>
+                                    </li>
+                                    <li class="setting-item">
+                                        <div class="setting-item__btn">
+                                            <i class="far fa-play-circle"></i>
+                                            <span>Giao diện</span>
+                                            <i class="fas fa-chevron-right"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="setting-menu__footer">
+                                <ul class="setting-menu__list">
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-info-circle"></i>
+                                                <span>Giới thiệu</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-flag"></i>
+                                                <span>Góp ý</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-phone-alt"></i>
+                                                <span>Liên hệ</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-ad"></i>
+                                                <span>Quảng cáo</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-ad"></i>
+                                                <span>Quảng cáo</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-clipboard-list"></i>
+                                                <span>Thoả thuận sử dụng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item">
+                                        <a href="#" class="setting-item__link">
+                                            <div class="setting-item__btn">
+                                                <i class="fas fa-shield-alt"></i>
+                                                <span>Chính sách bảo mật</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header-right__item">
+                        <div class="header-right__item-btn btn btn--circle">
+                            <img src="" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="app__container tab-myMusic app__container--active">
+            <div class="tab-myMusic__box">
+                <div class="container__item-heading">
+                    <span class="">Thư viện</span>
+                    <div class="btn btn--circle container__item-btn-play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="container__item-playlist tab-music-playlist">
+                    <div class="playlist-heading__box ">
+                        <div class="playlist-heading__box--left ">
+                            <span>PlayList</span>
+                            <div class="btn btn--circle-s tab-myMusic__box--btn-create-playlist">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="btn playlist-btn playlist-btn--left btn--circle-s">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="btn playlist-btn playlist-btn--right btn--circle-s">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="playlist-list">
+                                 
+                        </div>
+                    </div>
+                </div>
+                <ul class="tab-myMusic__list">
+                    <li class="tab-myMusic__item tab-myMusic__item--active">
+                        <a href="#" class="tab-myMusic__item-link">
+                            bài hát
+                        </a>
+                    </li>
+                    <li class="tab-myMusic__item">
+                        <a href="#" class="tab-myMusic__item-link">
+                            podcast
+                        </a>
+                    </li>
+                    <li class="tab-myMusic__item">
+                        <a href="#" class="tab-myMusic__item-link">
+                            album
+                        </a>
+                    </li>
+                    <li class="tab-myMusic__item">
+                        <a href="#" class="tab-myMusic__item-link">
+                            Mv
+                        </a>
+                    </li>
+                    <div class="tab-myMusic__line"></div>
+                </ul>
+                <div class="tab-myMusic__content">
+                    <div class="tab-myMusic__pane">
+                        <div class="tab-myMusic__selections">
+                            <button class="btn btn--nomal tab-myMusic__btn tab-myMusic__pane-btn--active">yêu thích</button>
+                            <button class="btn btn--nomal tab-myMusic__btn">đã tải lên</button>
+                        </div>
+                    </div>
+                    <div class="tab-myMusic__library">
+                        <div class="list">
+                            <div class="list__heading">
+                                <span class="list__heading--left">bài hat</span>
+                                <span class="list__heading--center">album</span>
+                                <span class="list__heading--right">thời gian</span>
+                            </div>
+                            <ul class="list-song"> 
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="app__container tab-discover" >
+            <div class="slider">
+                <div class=" slider__container " >
+                    <div class="slider__list">
+                        <div class="slider__box-btn">
+                            <div class="btn slider-btn--prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="btn slider-btn--next">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="slider__item-box"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-sections playlist--radio">
+                <div class="playlist-heading__box ">
+                    <div class="playlist-heading__box--left ">
+                        <span>Radio nổi bật</span>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--left btn--circle-s">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--right btn--circle-s">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-list playlist-list--radio">
+                            
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist-sections playlist--want-to-hear">
+                <div class="playlist-heading__box ">
+                    <div class="playlist-heading__box--left ">
+                        <span>V-Pop: 100 Hits Thập Niên</span>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--left btn--circle-s">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--right btn--circle-s">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-list">
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-sections playlist--today-selections">
+                <div class="playlist-heading__box ">
+                    <div class="playlist-heading__box--left ">
+                        <span>V-Pop: 100 Hits Thập Niên</span>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--left btn--circle-s">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="btn playlist-btn playlist-btn--right btn--circle-s">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-list">
+                                
+                    </div>
+                </div>
+            </div>
+            
+            <div class="playlist-sections playlist--for-fan">
+
+            </div>
+
+            <div class="playlist-sections playlist--new-song">
+
+            </div>
+
+            <div class="playlist-sections playlist--mix-for-you">
+
+            </div>
+
+        </div>
+        <div class="app__container">3</div>
+        <div class="app__container">4</div>
+        <div class="app__container">5</div>
+        <div class="playing-bar">
+            <div class="playing-bar__left">
+                <div class="card-song">
+                   
+                </div>
+                <ul class="card-song__controls-list">
+                    <li class="btn card-song__controls-item card-song__controls-item--heart--active btn--circle-s-l btn--heart-remove-song-library">
+                        <i class="card-song__controls-item-heart-empty far fa-heart"></i>
+                        <i class="card-song__controls-item-heart-fill fas fa-heart"></i>
+                    </li>
+                    <li class="btn btn--circle-s-l">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </li>           
+                </ul>
+            </div>
+            <div class="playing-bar__center">
+                <div class="player-control">
+                    <div class="btn btn--circle-s-l player-control__center--btn player-control--btn-random">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control__center--btn player-control--btn-prev">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="btn btn--circle player-control__center--btn player-control--btn-toggle-play">
+                        <i class="fas fa-pause player-control--btn-play-icon-pause"></i>
+                        <i class="fas fa-play player-control--btn-play-icon-play"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control__center--btn player-control--btn-next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control__center--btn player-control--btn-repeat">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                </div>
+                <div class="player-durations">
+                    <span class="player-durations__curTime">00.12</span>
+                    <div class="player-durations__box">
+                        <span class="player-durations__sub-input"></span>
+                        <input class="player-durations__time range-input" type="range" min="0" max="100" value = "0" step = "1">
+                    </div>
+                    <audio  id="audio" src=""></audio>
+                    <span class="player-durations__duration">03.00</span>
+                </div>
+            </div>
+            <div class="playing-bar__right">
+                <div class="player-control">
+                    <div class="btn btn--circle-s-l player-control--btn player-control--btn-movie">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control--btn player-control--btn-micro">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control--btn player-control--btn-window">
+                        <i class="far fa-window-restore"></i>
+                    </div>
+                    <div class="btn btn--circle-s-l player-control--btn player-control--btn-vol">
+                        <i class="fas fa-volume-mute player-control--btn-vol-mute"></i>
+                        <i class="fas fa-volume-up player-control--btn-vol-up"></i>
+                    </div>
+
+                    <div class="player-volumn__box">
+                        <span class="player-volumn__sub-input"></span>
+                        <input class="player-volumn__input range-input" type="range" name="" id="" min="0" max="100" value = "0" step = "1">
+                    </div>
+                    <div class="btn btn--circle-s-l  player-control--btn-list">
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="toast">
+            <!-- <div class="toast toast--info">
+                <div class="toast__body">
+                    <span class="toast__title">
+                        Thông báo
+                    </span>
+                    <p class="toast__message">
+                        Tạm thời chưa có tính năng này
+                    </p>
+                </div>
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>    
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+            <div class="modal__form">
+                <h3 class="modal__form-heading">
+                    Tạo playlist mới
+                </h3>
+                <form action="" class="modal__form-body">
+                    <input class="modal__form-body-input" type="text" placeholder="Nhập tên playlist">
+                    <div class="modal__form-body__box">
+                        <div class="modal__form-body__box-option">
+                            <div class="modal__form-body__box-option-title">
+                                <span>Công khai</span>
+                                <p>Mọi người có thể nhìn thấy playlist này</p>
+                            </div>
+                            <label class="checkbox-cus">
+                                <input type="checkbox" name="" id="">
+                                <span>
+                                    <i></i>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="modal__form-body__box-option">
+                            <div class="modal__form-body__box-option-title">
+                                <span>Công khai</span>
+                                <p>Mọi người có thể nhìn thấy playlist này</p>
+                            </div>
+                            <label class="checkbox-cus">
+                                <input type="checkbox" name="" id="">
+                                <span>
+                                    <i></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal__form-btn">
+                        <span>Tạo mới</span>
+                    </button>
+                </form>
+                <div class="modal__form-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

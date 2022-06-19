@@ -1,0 +1,151 @@
+
+
+.playing-bar{
+    bottom: 0;
+    width: 100%;
+    padding: 0 12px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--player-height);
+    background-color: var(--player-color);
+    border-top: 1px solid var(--border-sercon-color);
+}
+
+.playing-bar__left {
+    display: flex;
+    align-items: center;
+}
+
+.playing-bar__center{
+    width: 530px;
+}
+
+.playing-bar__left-box-img{
+    width: 64px;
+}
+
+.card-song__name-link{
+    font-size: 1.8rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.playing-bar__left .card-song__controls-item  {
+    display: flex;
+}
+
+/* player control */
+
+
+.playing-bar__center.playing .player-control--btn-play-icon-pause{
+    display: flex;
+}
+
+.playing-bar__center.playing .player-control--btn-play-icon-play{
+    display: none;
+}
+
+.player-control--btn-play-icon-pause{
+    display: none;
+}
+
+.player-control{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.player-control__center--btn + .player-control__center--btn {
+    margin-left: 14px;
+}
+
+.player-control--btn-toggle-play{
+    border: 1px solid var(--white-color);
+}
+
+.player-control--btn-toggle-play .player-control--btn-play-icon-play{
+    padding-left: 2px;
+}
+
+.player-control--btn-toggle-play:hover {
+    color: var(--link-text-hover);
+    border: 1px solid var(--link-text-hover);
+}
+
+.player-control--btn-random.active,
+.player-control--btn-repeat.active {
+    color: var(--primary-color);
+}
+
+.player-durations {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.player-volumn__box,
+.player-durations__box  {
+    margin: 0 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.player-volumn__sub-input,
+.player-durations__sub-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #c6aee7;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.player-volumn__box input,
+.player-durations__box input {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.player-durations .player-durations__duration,
+.player-durations .player-durations__curTime {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.player-durations .player-durations__curTime {
+    color: var(--text-color)
+}
+
+.player-durations .player-durations__duration{
+    color: var(--white-color)
+}
+
+
+ .player-control--btn-vol-up{
+    display: none;
+}
+
+.player-control--btn-vol.player-control--btn-vol-active .player-control--btn-vol-up{
+    display: flex
+}
+
+.player-control--btn-vol.player-control--btn-vol-active .player-control--btn-vol-mute{
+    display: none;
+}
+
+.player-control--btn-vol-mute{
+    display: flex;
+}
+
+.player-volumn__box {
+
+}
+

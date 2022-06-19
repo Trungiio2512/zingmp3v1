@@ -1,0 +1,68 @@
+
+.tab-myMusic__box {
+    margin-top: 70px;
+}
+
+.tab-myMusic__box--btn-create-playlist{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: var(--sercond-color);
+    margin-left: 4px;
+}
+
+.tab-myMusic__list{
+    width: 100%;
+    border-bottom: 1px solid var(--sercond-color);
+    position: relative;
+}
+
+.tab-myMusic__line{
+    position: absolute;
+    width: 10%;
+    height: 4px;
+    top: calc(100% - 4px);
+    border-radius: 3px;
+    background-color: var(--main-color);
+}
+
+.tab-myMusic__item{
+    display: inline-block;
+}
+
+.tab-myMusic__item + .tab-myMusic__item{
+    margin-left: 40px;
+}
+
+.tab-myMusic__item--active .tab-myMusic__item-link{
+    color:var(--white-color);
+}
+
+.tab-myMusic__item-link{
+    display: block;
+    padding: 18px 0;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight:500;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.tab-myMusic__content{
+    margin-top: 30px;
+}
+
+
+.tab-myMusic__selections{
+    margin-bottom: 18px;
+}
+
+.tab-myMusic__pane-btn--active{
+    background-color: var(--main-color);
+    border-color: var(--main-color)
+}
+
+.tab-myMusic__btn + .tab-myMusic__btn{
+    margin-left: 16px;
+}
+
