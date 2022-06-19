@@ -671,7 +671,7 @@ const app = {
         }
         else {
             inputVolume.value = this.consfig.valueVolumn
-            audio.volume = this.consfig.valueVolumn / 100
+            audio.volume = Math.floor(this.consfig.valueVolumn / 100)
             supportInputVol.style.width = parseInt(this.consfig.valueVolumn) + '%'
             btnVol.classList.add('player-control--btn-vol-active')
         }
